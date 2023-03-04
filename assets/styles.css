@@ -1,0 +1,23 @@
+.final-score {
+    display: none
+}
+
+.hide {
+    display: none
+}
+
+main {
+    text-align: center;
+    font-size: 5ex;    
+}
+
+body {
+    background-image: url(../assets/images/apples.jpg);
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper {
+    display: none;
+    background-color: yellow;
+}
