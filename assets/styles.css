@@ -1,23 +1,82 @@
-.final-score {
-    display: none
+#final-score {
+    display: none;
 }
 
 .hide {
-    display: none
+    display: none;
 }
 
-main {
+header {
     text-align: center;
-    font-size: 5ex;    
+    font-size: 5ex;
 }
 
 body {
     background-image: url(../assets/images/apples.jpg);
-    height: 100%;
-    width: 100%;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center;
 }
 
-.wrapper {
-    display: none;
+#start-screen,
+#questions,
+#end-screen {
+    margin: 50px auto;
+    width: 80%;
     background-color: yellow;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+#choices button {
+    display: block;
+    margin: 10px auto;
+}
+
+#end-screen form {
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 30%;
+    margin-right: 10px;
+}
+
+button[type=submit] {
+    margin-top: 10px;
+}
+
+button.correct {
+    background-color: green !important;
+}
+
+button.incorrect {
+    background-color: red;
+}
+
+.timer {
+    font-size: 30px;
+    color: white;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.highscore-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.highscore-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
 }

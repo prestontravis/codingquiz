@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>High Scores</title>
+    <link rel="stylesheet" href="./assets/highscore.css" />
+</head>
+
+<body>
+    <h1>High Scores</h1>
+    <ul id="high-scores"></ul>
+
+    <form>
+        <label for="initials">Enter your initials:</label>
+        <input type="text" id="initials" name="initials">
+        <button type="submit" id="submit-btn">Submit</button>
+        <button type="button" id="clear-btn">Clear High Scores</button>
+    </form>
+
+    <script>
+        const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+        const scoreList = document.getElementById("high-scores");
+
+        // Sort scores in descending order
+        highScores.sort((a, b) => b.score - a.score);
+
+        // Display high scores
+        highScores.forEach(score => {
+            const li = document.createElement("li");
+            li.textContent = `${score.initials} - ${score.score}`;
+            scoreList.appendChild(li);
+        });
+
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const initialsInput = document.getElementById("initials");
+            const initials = initialsInput.value;
+            const score = parseInt(finalScore.textContent);
+
+            const newScore = {
+                initials: initials,
+                score: score
+            };
+
+            highScores.push(newScore);
+
+            localStorage.setItem("highScores", JSON.stringify(highScores));
+
+            window.location.href = "index.html";
+        });
+
+        const clearBtn = document.getElementById("clear-btn");
+
+        clearBtn.addEventListener("click", function () {
+            localStorage.removeItem("highScores");
+            scoreList.innerHTML = "";
+        });
+    </script>
+</body>
+
+</html>
