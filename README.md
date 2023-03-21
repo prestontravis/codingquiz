@@ -17,6 +17,8 @@ WHEN the game is over
 THEN I can save my initials and score  
 
 ## Screenshot
+![Screenshot 2023-03-20 at 9 02 44 PM](https://user-images.githubusercontent.com/119766277/226496700-524f798b-576d-4207-9179-ff1e95f82fdd.png)
+
 
 ## Deployed Application  
 https://trayprey.github.io/codingquiz/. 
