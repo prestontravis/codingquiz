@@ -21,4 +21,4 @@ THEN I can save my initials and score
 
 
 ## Deployed Application  
-https://trayprey.github.io/codingquiz/. 
+https://prestontravis.github.io/codingquiz/. 
